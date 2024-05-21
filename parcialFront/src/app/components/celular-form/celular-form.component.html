@@ -1,0 +1,34 @@
+<div>
+  <h2>{{ isEdit ? 'Editar Celular' : 'Agregar Celular' }}</h2>
+  <form (ngSubmit)="saveCelular()">
+    <div>
+      <label for="marca">Marca:</label>
+      <input id="marca" [(ngModel)]="celular.marca" name="marca" required>
+    </div>
+    <div>
+      <label for="serial">Serial:</label>
+      <input id="serial" [(ngModel)]="celular.serial" name="serial" required>
+    </div>
+    <div>
+      <label for="fechaCompra">Fecha de Compra:</label>
+      <input id="fechaCompra" [(ngModel)]="celular.fechaCompra" name="fechaCompra" type="date" required>
+    </div>
+    <div>
+      <label for="anoLanzamiento">Año de Lanzamiento:</label>
+      <input id="anoLanzamiento" [(ngModel)]="celular.anoLanzamiento" name="anoLanzamiento" type="number" required>
+    </div>
+    <div>
+      <label for="precio">Precio:</label>
+      <input id="precio" [(ngModel)]="celular.precio" name="precio" type="number" required>
+    </div>
+    <div>
+      <label for="sistemaOperativo">Sistema Operativo:</label>
+      <input id="sistemaOperativo" [(ngModel)]="celular.sistemaOperativo" name="sistemaOperativo" required>
+    </div>
+    <div>
+      <label for="gama">Gama:</label>
+      <input id="gama" [(ngModel)]="celular.gama" name="gama" required>
+    </div>
+    <button type="submit">{{ isEdit ? 'Actualizar' : 'Guardar' }}</button>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <h2>Lista de Celulares</h2>
+  <button routerLink="/celulares/add">Agregar Celular</button>
+  <ul>
+    <li *ngFor="let celular of celulares">
+      {{ celular.marca }} - {{ celular.serial }} - {{ celular.fechaCompra | date }} - {{ celular.anoLanzamiento }} - {{ celular.precio | currency }} - {{ celular.sistemaOperativo }} - {{ celular.gama }}
+      <button (click)="deleteCelular(celular.id!)">Eliminar</button>
+      <button [routerLink]="['/celulares/edit', celular.id]">Editar</button>
+    </li>
+  </ul>
+</div>
